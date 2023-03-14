@@ -1,7 +1,6 @@
 # Collab16v2
 
 The TIC-80 Collab16v2 cartridge will be a "16-in-1" cartridge, with 16 games created by 16 different developers.
-[//]: # (It can be played online here.)
 
 This cartridge could be a fun way to encourage collaboration within the tic-80 community, allowing 16 different developers to come together to create something together. As far as I'm aware, it would also set the record for a tic-80 cartridge with the most authors. So let's have some fun, and create something cool together!
 
@@ -71,13 +70,13 @@ G[i] = {
 
 Each game requires a thumbnail that will be displayed in the main menu. Its index can be found under the Thumbnail Tile heading in the above table.
 
-To exit to the main menu, set the global variable `S` to a non-nil value (e.g. `S=1`) and ensure that any music that may have been playing has been stopped.
+To exit to the main menu, set the global variable `S` to nil value (e.g. `S=_`) and ensure that any music that may have been playing has been stopped.
 
 Do not add your name to the `authors` comment, as I will do that during the merging process. In case you wish to be credited differently here than in your `G[i].A` string, please mention that when submitting.
 
 #### 3. Submit
 
-Prior to submitting, ensure the size of your game (can be found in bottom-right corner of the code editor) does not exceed 6333. Please also try to get close to this limit so all games have comparable scope.
+Prior to submitting, ensure the size of your game (can be found in bottom-right corner of the code editor) does not exceed 6633. Please also try to get close to this limit so all games have comparable scope.
 
 You have 2 options as to how you wish to submit your game:
 - Upload the cartige to the [tic-80 website](https://tic80.com) as a Work-in-progress cart.
@@ -89,7 +88,7 @@ Then, contact me as you did in Step 1 with a link to the uploaded cartridge or p
 
 - Do not write to the `p`, `S`, `G`, and `I` global variables.
 - Initialize all game state in the `G[i].I` function, so the game can be launched multiple times. The only things your `G[i].T` function may assume about global state should be guaranteed by `G[i].I`.
-- The game must return to the menu screen after a game over. This can be done as follows `S=1`
+- The game must return to the menu screen after a game over. This can be done as follows `S=_`
 - Try to avoid global variables, instead favoring storing all state as values in your `G[i]` table.
 - Try to avoid making games that require the mouse, but do not treat this as a strict rule.
 - Try to add sound effects and/or music to your game. This is, however, entirely optional.

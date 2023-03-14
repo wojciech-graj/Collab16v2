@@ -103,7 +103,7 @@ G[16] = {
    I = function(self) end,
 }
 function F(x,y)spr(64*y+4*x,72+24*x,20+24*y,-1,3)end
-function TIC()if S then G[I]:T()else X=(I-1)%4Y=(I-1)//4I=btnp(0)and I>4 and I-4or(btnp(1)and I<13)and I+4or(btnp(2)and X>0)and I-1or(btnp(3)and X<3)and I+1or I cls()for y=0,3 do for x=0,3 do F(x,y)end end rect(70+X*24,18+Y*24,28,28,12)F(X,Y)p("TIC-80 Collab16v2",74,8,12)p("Title:\nAuthor:",72,122,12)p(G[I].N,101,122,12)p(G[I].A,112,128,12)end end
+function TIC()if S then G[I]:T()elseif btnp(4)then S=1G[I]:I()else X=(I-1)%4Y=(I-1)//4I=btnp(0)and I>4 and I-4or(btnp(1)and I<13)and I+4or(btnp(2)and X>0)and I-1or(btnp(3)and X<3)and I+1or I cls()for y=0,3 do for x=0,3 do F(x,y)end end rect(70+X*24,18+Y*24,28,28,12)F(X,Y)p("TIC-80 Collab16v2",74,8,12)p("Title:\nAuthor:",72,122,12)p(G[I].N,101,122,12)p(G[I].A,112,128,12)end end
 -- <TILES>
 -- 000:1111111119911991191111911119911111199111191111911991199111111111
 -- 001:1111111111111111111111111111111111111111111111111111111111111111
